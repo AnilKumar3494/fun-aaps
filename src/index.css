@@ -26,8 +26,9 @@ body {
 
   background-image: url(./assets/bg_wallpaper.webp);
 
+  background-position: center;
   background-size: cover;
-  background-repeat: no-repeat;
+
   backdrop-filter: blur(3px);
 }
 
