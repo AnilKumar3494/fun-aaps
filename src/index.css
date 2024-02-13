@@ -24,7 +24,11 @@ body {
 
   height: 100vh;
 
-  border: 2px solid honeydew;
+  background-image: url(./assets/bg_wallpaper.webp);
+
+  background-size: cover;
+  background-repeat: no-repeat;
+  backdrop-filter: blur(3px);
 }
 
 @media (prefers-color-scheme: light) {

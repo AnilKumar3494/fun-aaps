@@ -4,6 +4,7 @@ import Happyemojirain from "./Happyemojirain";
 import Sademojiesrain from "./Sademojies";
 
 import { FaArrowLeft } from "react-icons/fa";
+import Excitementemojirain from "./Excitementemojirain";
 
 const Valentine = () => {
   const [yesBtnIndex, setYesBtnIndex] = useState(0);
@@ -17,13 +18,13 @@ const Valentine = () => {
     "Really??",
     "Are you really sure?",
     "Are you really really sure?",
-    "Awwww! I LOVE YOU",
+    "Awwww! I LOVE YOU 💓",
   ];
   const noBtnContentArray = [
     "No",
     "Really? 🥺",
     "O.M.G 🥺🥲??",
-    "No more NO, Baby Just Say Yess!!!",
+    "No more NO, Baby Just Say 'YESS'!!!",
   ];
 
   function changeYesBtnContent() {
@@ -67,15 +68,21 @@ const Valentine = () => {
         <h2>Will you be my Valentine?</h2>
 
         <div className="buttons">
-          {/* if last index -- change to re do */}
-          <button className="btn yes" onClick={changeYesBtnContent}>
-            Yes
-          </button>
+          {yesBtnIndex === yesBtnContentArray.length - 1 ? (
+            <button className="btn yes" onClick={changeYesBtnContent}>
+              ❤️💓
+            </button>
+          ) : (
+            <button className="btn yes" onClick={changeYesBtnContent}>
+              Yes
+            </button>
+          )}
 
           {noBtnIndex === noBtnContentArray.length - 1 ||
           yesBtnIndex === yesBtnContentArray.length - 1 ? (
             <button className="btn yes" onClick={changeNoBtnContent} disabled>
               <FaArrowLeft />
+              <Excitementemojirain />
             </button>
           ) : (
             <button className="btn no" onClick={changeNoBtnContent}>
