@@ -69,6 +69,7 @@ const Valentine = () => {
 
             <h2>Will you be my Valentine?</h2>
 
+            {/* YES BUTTON */}
             <div className="buttons">
               {yesBtnIndex === yesBtnContentArray.length - 1 ? (
                 <button className="btn yes" onClick={changeYesBtnContent}>
@@ -80,6 +81,7 @@ const Valentine = () => {
                 </button>
               )}
 
+              {/* NO BUTTON */}
               {noBtnIndex === noBtnContentArray.length - 1 ||
               yesBtnIndex === yesBtnContentArray.length - 1 ? (
                 <>

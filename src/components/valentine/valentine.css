@@ -12,8 +12,7 @@ h4 {
 }
 
 .valentine_section {
-  height: 90vh;
-  height: 90dvh;
+  height: 100dvh;
 
   background: url(./bg_wallpaper.webp);
   background-position: center;
