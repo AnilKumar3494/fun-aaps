@@ -11,6 +11,27 @@ h4 {
   text-shadow: -2px 2px #ef3550, -5px 5px #f48fb1;
 }
 
+.valentine_section {
+  height: 90vh;
+  height: 90dvh;
+
+  background: url(./bg_wallpaper.webp);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  overflow: hidden;
+}
+
+.test {
+  height: 100%;
+
+  backdrop-filter: blur(3px);
+
+  display: grid;
+  place-items: center;
+}
+
 .question {
   border: 2px solid saddlebrown;
   display: grid;
@@ -25,7 +46,7 @@ h4 {
 }
 
 .btn {
-  padding: 1rem;
+  padding: 1rem 1.4rem;
   border-radius: 0.3rem;
   border: none;
   outline: none;
@@ -49,30 +70,21 @@ h4 {
   background-color: red;
 }
 
+/* responsive */
 @media (max-width: 700px) {
-  body {
-    overflow-x: hidden;
-    overflow-y: hidden;
-  }
-  section {
-    max-width: 95vw;
-  }
   h2,
   h4 {
     font-size: 1.3rem;
   }
 }
 
-@media (max-width: 400px) {
-  section {
-    max-width: 95vw;
-  }
+@media (max-width: 450px) {
   h2,
   h4 {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
   }
   .btn {
-    font-size: 0.8rem;
+    font-size: 1rem;
     padding: 0.8rem;
   }
 }

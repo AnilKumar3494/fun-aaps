@@ -54,52 +54,62 @@ const Valentine = () => {
   };
 
   return (
-    <>
-      {/* emoji rain control - frontend */}
-      {showHappyEmojirain === null ? (
-        ""
-      ) : showHappyEmojirain ? (
-        <Happyemojirain />
-      ) : (
-        <Sademojiesrain />
-      )}
+    <main>
+      <section className="valentine_section">
+        <div className="test">
+          <div className="question ">
+            {/* emoji rain control - frontend */}
+            {showHappyEmojirain === null ? (
+              ""
+            ) : showHappyEmojirain ? (
+              <Happyemojirain />
+            ) : (
+              <Sademojiesrain />
+            )}
 
-      <section className="question">
-        <h2>Will you be my Valentine?</h2>
+            <h2>Will you be my Valentine?</h2>
 
-        <div className="buttons">
-          {yesBtnIndex === yesBtnContentArray.length - 1 ? (
-            <button className="btn yes" onClick={changeYesBtnContent}>
-              ❤️💓
-            </button>
-          ) : (
-            <button className="btn yes" onClick={changeYesBtnContent}>
-              Yes
-            </button>
-          )}
+            <div className="buttons">
+              {yesBtnIndex === yesBtnContentArray.length - 1 ? (
+                <button className="btn yes" onClick={changeYesBtnContent}>
+                  ❤️💓
+                </button>
+              ) : (
+                <button className="btn yes" onClick={changeYesBtnContent}>
+                  Yes
+                </button>
+              )}
 
-          {noBtnIndex === noBtnContentArray.length - 1 ||
-          yesBtnIndex === yesBtnContentArray.length - 1 ? (
-            <button className="btn yes" onClick={changeNoBtnContent} disabled>
-              <FaArrowLeft />
-              <Excitementemojirain />
-            </button>
-          ) : (
-            <button className="btn no" onClick={changeNoBtnContent}>
-              No
-            </button>
-          )}
+              {noBtnIndex === noBtnContentArray.length - 1 ||
+              yesBtnIndex === yesBtnContentArray.length - 1 ? (
+                <>
+                  <button
+                    className="btn yes"
+                    onClick={changeNoBtnContent}
+                    disabled
+                  >
+                    <FaArrowLeft />
+                  </button>
+                  <Excitementemojirain />
+                </>
+              ) : (
+                <button className="btn no" onClick={changeNoBtnContent}>
+                  No
+                </button>
+              )}
+            </div>
+
+            <h4>
+              {clickedYes === null
+                ? "👀👀"
+                : clickedYes
+                ? yesBtnContentArray[yesBtnIndex]
+                : noBtnContentArray[noBtnIndex]}
+            </h4>
+          </div>
         </div>
-
-        <h4>
-          {clickedYes === null
-            ? "👀👀"
-            : clickedYes
-            ? yesBtnContentArray[yesBtnIndex]
-            : noBtnContentArray[noBtnIndex]}
-        </h4>
       </section>
-    </>
+    </main>
   );
 };
 
