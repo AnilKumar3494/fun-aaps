@@ -1,0 +1,44 @@
+body {
+  overflow: hidden;
+}
+h2 {
+  font-size: 2.2rem;
+  font-weight: 800;
+}
+h4 {
+  padding-top: 1rem;
+  font-size: 1.3rem;
+}
+.question {
+  border: 2px solid saddlebrown;
+  display: grid;
+  place-items: center;
+  gap: 1.1rem;
+  padding: 3rem;
+}
+
+.buttons {
+  display: flex;
+  gap: 1rem;
+}
+
+.btn {
+  padding: 1rem;
+  border-radius: 0.3rem;
+  border: none;
+  outline: none;
+
+  font-weight: bolder;
+  font-size: 1.1rem;
+  color: black;
+
+  cursor: pointer;
+}
+
+.yes {
+  background-color: lightgreen;
+}
+
+.no {
+  background-color: red;
+}
