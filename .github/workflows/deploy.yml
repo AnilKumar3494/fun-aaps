@@ -38,8 +38,8 @@ jobs:
     if: github.ref == 'refs/heads/main'
 
     steps:
-      - name: List files before Download Artifact
-        run: ls -al # Check directory contents before download
+      - name: List files before Download Artifact (Deploy Job)
+        run: ls -al
 
       - name: Download artifact
         uses: actions/download-artifact@v4
@@ -47,11 +47,14 @@ jobs:
           name: production-files
           path: dist
 
-      - name: List files after Download Artifact
-        run: ls -al # Check directory contents after download
+      - name: List files after Download Artifact (Deploy Job)
+        run: ls -al
+
+      - name: List files just before Deploy to GH Pages
+        run: ls -al ./dist # Check specifically for ./dist before GH Pages step
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: dist
+          publish_dir: ./dist # ✅ Let's try explicitly using ./dist again
