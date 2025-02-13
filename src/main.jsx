@@ -7,6 +7,5 @@ import Time from "./components/time/Time.jsx";
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <Valentine />
-    {/* <Time /> */}
   </React.StrictMode>
 );
