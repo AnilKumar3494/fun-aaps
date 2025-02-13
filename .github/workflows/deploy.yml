@@ -45,7 +45,7 @@ jobs:
         uses: actions/download-artifact@v4
         with:
           name: production-files
-          path: dist
+          path: deploy_dist # ✅ Download to 'deploy_dist' subdirectory
 
       - name: List files after Download Artifact
         run: ls -al
@@ -54,4 +54,4 @@ jobs:
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./dist # ✅ Explicitly using ./dist again
+          publish_dir: ./deploy_dist # ✅ Publish from 'deploy_dist' subdirectory (explicit path)
