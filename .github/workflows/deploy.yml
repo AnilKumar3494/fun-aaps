@@ -20,7 +20,7 @@ jobs:
           node-version: 20 # Consider upgrading to a more recent Node.js version like 20
 
       - name: Install dependencies
-        uses: bahmutov/npm-install@v4 # This action might also have newer versions, check if updates are available
+        uses: bahmutov/npm-install@v1 # This action might also have newer versions, check if updates are available
 
       - name: Build project
         run: npm run build
